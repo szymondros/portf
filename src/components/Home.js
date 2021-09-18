@@ -17,13 +17,15 @@ const Home = () => {
                     <HomeSignNav/>
                     <HomeNav/>
                 </header>
+                <HomeHeader/>
             </PageWrapper>
-            <HomeHeader/>
             <HomeThreeColumns/>
-            <HomeFourColumns/>
-            <HomeAbout/>
-            <HomeWhoWeHelp/>
-            <HomeContactUs/>
+            <PageWrapper>
+                <HomeFourColumns/>
+                <HomeAbout/>
+                <HomeWhoWeHelp/>
+                <HomeContactUs/>
+            </PageWrapper>
         </>
     );
 };
