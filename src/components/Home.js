@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from "styled-components";
+import "../scss/home/home.scss"
 import HomeSignNav from "./HomeSignNav";
 import HomeNav from "./HomeNav";
 import HomeHeader from "./HomeHeader";
@@ -12,26 +12,20 @@ import HomeContactUs from "./HomeContactUs";
 const Home = () => {
     return (
         <>
-            <PageWrapper>
-                <header>
-                    <HomeSignNav/>
-                    <HomeNav/>
-                </header>
+            <div className="home__page__wrapper">
+                <HomeSignNav/>
+                <HomeNav/>
                 <HomeHeader/>
-            </PageWrapper>
+            </div>
             <HomeThreeColumns/>
-            <PageWrapper>
+            <div className="home__page__wrapper">
                 <HomeFourColumns/>
                 <HomeAbout/>
                 <HomeWhoWeHelp/>
                 <HomeContactUs/>
-            </PageWrapper>
+            </div>
         </>
     );
 };
-
-const PageWrapper = styled.div`
-  padding: 0 20px;
-`;
 
 export default Home;
