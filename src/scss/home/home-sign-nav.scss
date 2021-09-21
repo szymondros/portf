@@ -1,0 +1,23 @@
+@import "src/scss/settings/colors";
+@import "src/scss/settings/fonts";
+
+.home__nav__buttons {
+  padding: 20px 0 10px 0;
+  display: flex;
+  justify-content: flex-end;
+
+  a {
+    text-decoration: none;
+    font-size: 13px;
+    color: $gray-accent-color;
+    padding: 5px 15px;
+  }
+
+  .nav__button__signup {
+    border: 1px solid $yellow-accent-color;
+  }
+
+  .nav__button__login {
+    border: 1px solid transparent;
+  }
+}
