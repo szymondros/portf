@@ -12,11 +12,9 @@ import HomeContactUs from "./HomeContactUs";
 const Home = () => {
     return (
         <>
-            <div className="home__page__wrapper">
-                <HomeSignNav/>
-                <HomeNav/>
-                <HomeHeader/>
-            </div>
+            <HomeSignNav/>
+            <HomeNav/>
+            <HomeHeader/>
             <HomeThreeColumns/>
             <div className="home__page__wrapper">
                 <HomeFourColumns/>
