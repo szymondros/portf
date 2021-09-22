@@ -1,6 +1,7 @@
 import React from 'react';
 import "../scss/home/home-four-columns.scss";
 import StepColumn from "./StepColumn";
+import HomeHeaderButton from "./HomeHeaderButton";
 
 const HomeFourColumns = () => {
     return (
@@ -25,6 +26,7 @@ const HomeFourColumns = () => {
                             title="Zamów kuriera"
                             desc="kurier przyjedzie w dogodnym terminie" />
             </div>
+            <HomeHeaderButton text="Oddaj rzeczy" />
         </section>
     );
 };

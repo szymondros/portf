@@ -1,0 +1,43 @@
+@import "src/scss/settings/colors";
+
+.home__about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+
+  .about__description {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    h1 {
+      font-size: 1.4rem;
+      color: $dark-accent-color;
+    }
+
+    hr {
+      width: 30%;
+      border-color: $dark-accent-color;
+    }
+
+    p {
+      font-size: 1.2rem;
+      line-height: 1.4rem;
+      color: $dark-accent-color;
+      text-align: center;
+      padding-top: 20px;
+    }
+
+    img {
+      align-self: flex-end;
+      height: 80px;
+      padding-top: 20px;
+    }
+  }
+  img {
+    width: 50%;
+  }
+}
