@@ -1,10 +1,9 @@
 import React from 'react';
+import {Link} from "react-router-dom";
 
-const HomeHeaderButton = () => {
+const HomeHeaderButton = ({text}) => {
     return (
-        <div>
-            
-        </div>
+        <Link to="/login">{text}</Link>
     );
 };
 
