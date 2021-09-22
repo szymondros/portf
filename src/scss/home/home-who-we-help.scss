@@ -1,0 +1,51 @@
+@import "src/scss/settings/colors";
+
+.home__help {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  color: $dark-accent-color;
+  background: $base-light-color;
+
+  h1 {
+    font-size: 1.4rem;
+  }
+
+  hr {
+    width: 30%;
+    border-color: $dark-accent-color;
+  }
+
+  .help__type__box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-top: 20px;
+
+    div {
+      cursor: pointer;
+      margin-bottom: 10px;
+      padding: 10px 15px;
+      font-size: 0.8rem;
+      text-align: center;
+      width: 200px;
+    }
+  }
+  p {
+    text-align: center;
+    font-size: 0.8rem;
+    line-height: 1rem;
+  }
+}
+
+.bordered {
+  border: 1px solid $dark-accent-color;
+}
+
+.transparent {
+  border: 1px solid transparent;
+}
