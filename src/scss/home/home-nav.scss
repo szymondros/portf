@@ -34,7 +34,8 @@
     width: 40px;
     height: 40px;
     padding: 10px 10px;
-    background: white;
+    background: $yellow-accent-color;
+    border-bottom-right-radius: 10px;
     display: flex;
     align-items: center;
     justify-content: center;

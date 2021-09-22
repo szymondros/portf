@@ -16,12 +16,10 @@ const Home = () => {
             <HomeNav/>
             <HomeHeader/>
             <HomeThreeColumns/>
-            <div className="home__page__wrapper">
-                <HomeFourColumns/>
-                <HomeAbout/>
-                <HomeWhoWeHelp/>
-                <HomeContactUs/>
-            </div>
+            <HomeFourColumns/>
+            <HomeAbout/>
+            <HomeWhoWeHelp/>
+            <HomeContactUs/>
         </>
     );
 };
