@@ -5,7 +5,7 @@
   top: 0;
   left: 0;
 
-  .home__nav__toggler {
+  .nav__toggler {
     position: absolute;
     top: 0;
     left: 0;
@@ -17,29 +17,30 @@
     z-index: 1;
   }
 //toggler animate
-  .home__nav__toggler:checked + .home__nav__hamburger > div {
+  .nav__toggler:checked + .nav__hamburger > div {
     transform: rotate(135deg);
   }
 
-  .home__nav__toggler:checked + .home__nav__hamburger > div:before,
-  .home__nav__toggler:checked + .home__nav__hamburger > div:after {
+  .nav__toggler:checked + .nav__hamburger > div:before,
+  .nav__toggler:checked + .nav__hamburger > div:after {
     top: 0;
     transform: rotate(90deg);
   }
 
-  .home__nav__hamburger {
+  .nav__hamburger {
     position: absolute;
     top: 0;
     left: 0;
     width: 40px;
     height: 40px;
     padding: 10px 10px;
+    background: white;
     display: flex;
     align-items: center;
     justify-content: center;
   }
 //Hamburger lines
-  .home__nav__hamburger > div {
+  .nav__hamburger > div {
     position: relative;
     width: 70%;
     height: 2px;
@@ -50,8 +51,8 @@
     transition: all 0.4s ease;
   }
 //Before and after lines
-  .home__nav__hamburger > div:before,
-  .home__nav__hamburger > div:after {
+  .nav__hamburger > div:before,
+  .nav__hamburger > div:after {
     content: "";
     position: absolute;
     top: -10px;
@@ -60,16 +61,16 @@
     background: inherit;
   }
 //Move after line to bottom
-  .home__nav__hamburger > div:after {
+  .nav__hamburger > div:after {
     top: 10px;
   }
 
-  .home__nav__list__wrapper {
+  .nav__list__wrapper {
     width: 100vw;
     height: 100vh;
     background-color: $yellow-accent-color;
 
-    .home__nav__list {
+    .nav__list {
       position: fixed;
       top: 0;
       left: 0;
