@@ -9,7 +9,7 @@ const HomeHeader = () => {
             <h1>Zacznij pomagać!</h1>
             <h1>Oddaj niechciane rzeczy w zaufane ręce</h1>
             <hr/>
-            <div className="home__header__buttons__wrapper">
+            <div className="header__buttons__wrapper">
                 <HomeHeaderButton text="Oddaj rzeczy"/>
                 <HomeHeaderButton text="Zorganizuj zbiórkę"/>
             </div>
