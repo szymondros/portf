@@ -1,12 +1,9 @@
 import React, {useState, useEffect} from 'react';
 
-const HelpButton = ({setOrganization, currentOrganization, text, textToSet}) => {
-
-    const [active, setActive] = useState(false);
+const HelpButton = ({setOrganization, currentOrganization, text, textToSet, data}) => {
 
     const clickHandler = () => {
-        setOrganization(textToSet);
-        setActive(!active);
+        setOrganization(textToSet, data);
     }
 
     useEffect(() => {

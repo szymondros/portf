@@ -26,7 +26,7 @@ const foundations = [
     {
         title: 'Fundacja "Wsparcie z nauce"',
         desc: 'Pomoc dzieciom i młodzieży z ubogich rodzin',
-        items: ["ubrania", "komputery", "tablety", "ksiażki", "zabawki edukacyjne"]
+        items: ["ubrania", "komputery", "ksiażki", "zabawki edukacyjne"]
     },
 
     {
@@ -38,19 +38,19 @@ const foundations = [
     {
         title: 'Fundacja "Zdrowy emeryt"',
         desc: 'Pomoc emerytom i rencistom w utrzymaniu dobrej formy',
-        items: ["ubrania sportowe", "przyrządy do ćwiczeń", "sprzęt rehabilitacyjny"]
+        items: ["ubrania sportowe", "sprzęt rehabilitacyjny"]
     },
 
     {
         title: 'Fundacja "Przytulne gniazdko"',
         desc: 'Pomoc dla rodzin z trudnej sytuacji mieszkaniowej',
-        items: ["meble", "dekoracje do domu", "koce", "pościele", "materiały budowlane"]
+        items: ["meble", "dekoracje do domu", "materiały budowlane"]
     },
 
     {
         title: 'Fundacja "Poszkolny zakątek"',
         desc: 'Pomoc odzieciom i młodzieży przez organizację czasu poszkolnego',
-        items: ["stoliki", "krzesła", "komputery", "książki", "przybory szkolne"]
+        items: ["stoliki", "komputery", "książki", "przybory szkolne"]
     },
 ];
 
