@@ -1,0 +1,113 @@
+@import "src/scss/settings/colors";
+@import "src/scss/settings/fonts";
+
+.contact-form__container {
+  padding-bottom: 40px;
+  padding-top: 40px;
+
+  .contact-form__form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    h1 {
+      font-size: 1.4rem;
+      color: $dark-accent-color;
+    }
+
+    hr {
+      width: 30%;
+      border-color: $dark-accent-color;
+    }
+
+    form {
+      width: 80%;
+      color: $dark-accent-color;
+      padding-top: 30px;
+
+      label {
+        padding-top: 5px;
+        font-size: 0.9rem;
+      }
+
+      .error-msg-wrapper {
+        height: 20px;
+
+        .error-message {
+          font-size: 0.65rem;
+          color: red;
+          padding-top: 2px;
+        }
+      }
+
+      input {
+        border: none;
+        border-bottom: 1px solid $dark-accent-color;
+        margin-top: 5px;
+        padding: 5px;
+        font-size: 0.95rem;
+        color: $dark-accent-color;
+        font-weight: 300;
+        background: white;
+      }
+
+      input:focus {
+        background: $base-light-color;
+        outline: none;
+      }
+
+      input::placeholder {
+        color: $base-light-color;
+      }
+
+      textarea {
+        border: none;
+        border-bottom: 1px solid $dark-accent-color;
+        resize: none;
+        padding: 5px;
+        margin-top: 5px;
+        height: 150px;
+        font-family: $font-base;
+      }
+
+      textarea:focus {
+        outline: none;
+        background: $base-light-color;
+      }
+
+      textarea::placeholder {
+        color: $base-light-color;
+      }
+
+      .form-name {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .form-email {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .form-textarea {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .submit-btn {
+        margin-top: 10px;
+        position: relative;
+        right: 0;
+        padding: 5px 10px;
+        background: white;
+        text-transform: uppercase;
+        border: 1px solid $dark-accent-color;
+        width: 50%;
+        float: right;
+      }
+    }
+  }
+
+
+}
