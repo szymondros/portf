@@ -1,10 +1,9 @@
 import React from 'react';
 
-const Hamburger = ({showMenu}) => {
+const Hamburger = ({showMenu, toggleClass}) => {
     return (
         <>
-            <input type="checkbox" onClick={showMenu} className="nav__toggler"/>
-            <div className="nav__hamburger">
+            <div onClick={showMenu} className={toggleClass}>
                 <div />
             </div>
         </>

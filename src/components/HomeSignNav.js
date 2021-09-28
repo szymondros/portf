@@ -6,7 +6,7 @@ import "../scss/home/home-sign-nav.scss"
 
 const HomeSignNav = () => {
     return (
-        <div className="home__nav__buttons">
+        <div id="start" className="home__nav__buttons">
             <LoginButton />
             <SignUpButton />
         </div>

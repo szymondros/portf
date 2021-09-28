@@ -1,10 +1,10 @@
 import React from 'react';
-import HomeNav from "./HomeNav";
+import ClosePageIcon from "./ClosePageIcon";
 
 const ResetPass = () => {
     return (
         <div>
-            <HomeNav/>
+            <ClosePageIcon />
         </div>
     );
 };

@@ -1,5 +1,4 @@
 import React, {useCallback, useContext} from 'react';
-import HomeNav from "./HomeNav";
 import {AuthContext} from "../Auth";
 import app from "../base";
 import {withRouter, Redirect} from "react-router-dom";
@@ -7,7 +6,8 @@ import * as yup from "yup";
 import {ErrorMessage} from '@hookform/error-message';
 import {yupResolver} from "@hookform/resolvers/yup";
 import {useForm} from "react-hook-form";
-import "../scss/home/log-in.scss";
+import "../scss/home/sign.scss";
+import ClosePageIcon from "./ClosePageIcon";
 
 const LogIn = ({history}) => {
 
@@ -25,7 +25,7 @@ const LogIn = ({history}) => {
     });
 
     const handleLogin = useCallback(
-        async event => {
+        async () => {
             const email = getValues("email");
             const password = getValues("password");
             try {
@@ -45,28 +45,37 @@ const LogIn = ({history}) => {
     if (currentUser) {
         return <Redirect to="/dashboard"/>;
     }
+
     return (
         <>
-            <HomeNav/>
+            <ClosePageIcon/>
             <div className="sign__container">
-                <h1>Zaloguj się</h1>
-                <form onSubmit={handleSubmit(handleLogin)}>
-                    <div className="sign-email">
-                        <label htmlFor="email">Adres e-mail</label>
-                        <input {...register("email")} onChange={e => setValue("email", e.target.value)}/>
-                        <div className="error-msg-wrapper">
-                            <ErrorMessage as={<div className={"error-message"}/>} errors={errors} name={"email"}/>
+                <div className="sign__wrapper">
+                    <h1>Zaloguj się</h1>
+                    <p>Zaloguj się na swoje konto</p>
+                    <form onSubmit={handleSubmit(handleLogin)}>
+                        <div className="sign-email">
+                            <label htmlFor="email">Adres e-mail</label>
+                            <input type="email"
+                                   {...register("email")}
+                                   onChange={e => setValue("email", e.target.value)}/>
+                            <div className="error-msg-wrapper">
+                                <ErrorMessage as={<div className={"error-message"}/>} errors={errors} name={"email"}/>
+                            </div>
                         </div>
-                    </div>
-                    <div className="sign-password">
-                        <label htmlFor="password">Wprowadź hasło</label>
-                        <input {...register("password")} onChange={e => setValue("email", e.target.value)}/>
-                        <div className="error-msg-wrapper">
-                            <ErrorMessage as={<div className={"error-message"}/>} errors={errors} name={"email"}/>
+                        <div className="sign-password">
+                            <label htmlFor="password">Wprowadź hasło</label>
+                            <input type="password"
+                                   {...register("password")}
+                                   onChange={e => setValue("password", e.target.value)}/>
+                            <div className="error-msg-wrapper">
+                                <ErrorMessage as={<div className={"error-message"}/>} errors={errors}
+                                              name={"password"}/>
+                            </div>
                         </div>
-                    </div>
-                    <button type="submit" className="submit-btn">Zaloguj</button>
-                </form>
+                        <button type="submit" className="sign-in-btn">Zaloguj</button>
+                    </form>
+                </div>
             </div>
         </>
     );
