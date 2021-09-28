@@ -1,0 +1,12 @@
+@import "src/scss/settings/colors";
+
+.close-page-icon {
+  position: absolute;
+  right: 25px;
+  top: 20px;
+  text-decoration: none;
+  color: $dark-accent-color;
+  font-size: 35px;
+  display: flex;
+  justify-content: flex-end;
+}

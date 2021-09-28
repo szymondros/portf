@@ -6,9 +6,6 @@ import {yupResolver} from "@hookform/resolvers/yup";
 import {ErrorMessage} from "@hookform/error-message";
 import {isMobile} from "react-device-detect";
 import firebase from "firebase/compat";
-import app from "../base";
-
-
 
 const HomeContactUs = () => {
 
@@ -30,15 +27,23 @@ const HomeContactUs = () => {
         resolver: yupResolver(validationSchema)
     });
 
-    const onSubmit = async () => {
-        const userEmail = getValues("email");
+    const db = firebase.firestore();
 
-        const textObj = {
+    const getCurrentTime = () => {
+        new Date();
+        let timeStamp = Date.now();
+        return timeStamp;
+    }
+
+    const onSubmit = async () => {
+        const time = getCurrentTime();
+        const msgObj = {
+            timestamp: time,
             name: getValues("firstName"),
             email: getValues("email"),
             text: getValues("textarea")
         }
-        db.collection("home-messages").add(textObj)
+        db.collection("home-messages").add(msgObj)
             .then(function () {
                 console.log("udało się")
             })
@@ -47,12 +52,8 @@ const HomeContactUs = () => {
             })
     };
 
-
-    const db = firebase.firestore();
-
-
     return (
-        <section id="contact=form" className="home__contact-form home__page__wrapper">
+        <section id="contact-form" className="home__contact-form home__page__wrapper">
             <div className="contact-form__container">
                 {isMobile ? <></> : <img src="" alt="sd"/>}
                 <div className="contact-form__form">
@@ -84,10 +85,7 @@ const HomeContactUs = () => {
                                 <ErrorMessage as={<div className={"error-message"}/>} errors={errors} name="textarea"/>
                             </div>
                         </div>
-                        <button type="submit"
-                                className="submit-btn"
-                        >Wyślij
-                        </button>
+                        <button type="submit" className="submit-btn">Wyślij</button>
                     </form>
                 </div>
             </div>

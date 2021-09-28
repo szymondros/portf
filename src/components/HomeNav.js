@@ -8,13 +8,15 @@ const HomeNav = () => {
 
     const showMenuHandler = () => {
         setShowMenu(!showMenu);
+        document.body.classList.toggle("blocked-scroll");
     }
 
     return (
         <div className="home__nav__wrapper">
-            <Hamburger showMenu={showMenuHandler}/>
+            <Hamburger toggleClass={showMenu ? "nav__hamburger--rotate" : "nav__hamburger"}
+                       showMenu={showMenuHandler}/>
             {showMenu ?
-                <HomeNavList />
+                <HomeNavList showMenu={showMenuHandler} />
                 :
                 <></>
             }

@@ -5,3 +5,7 @@
 body {
   font-family: $font-base;
 }
+
+.blocked-scroll {
+  overflow: hidden;
+}

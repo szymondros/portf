@@ -18,7 +18,7 @@ const HomeHeader = () => {
                 isMobile ?
                     <></>
                     :
-                    <img src="images/hero-image.png" alt="hero-image"/>
+                    <img src="images/hero-image.png" alt="books"/>
             }
         </section>
     );

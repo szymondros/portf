@@ -1,4 +1,3 @@
-import { initializeApp } from "firebase/firebase-app";
 import "firebase/auth";
 import "firebase/database";
 import "firebase/firestore";
